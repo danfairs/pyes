@@ -294,7 +294,7 @@ class TermFacet(Facet):
             else:
                 raise RuntimeError("Field or Fields is required:%s" % self.order)
 
-        if self.size:
+        if self.size is not None:
             data['size'] = self.size
 
         if self.order:
